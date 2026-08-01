@@ -182,3 +182,35 @@ window.addEventListener("load", () => {
         });
 
 });
+
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const filterButtons = document.querySelectorAll(".portfolio-filter");
+    const portfolioCards = document.querySelectorAll(".portfolio-card");
+
+    if (!filterButtons.length || !portfolioCards.length) {
+      return;
+    }
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const selectedFilter = button.dataset.filter;
+
+        filterButtons.forEach((item) => {
+          const isSelected = item === button;
+
+          item.classList.toggle("is-active", isSelected);
+          item.setAttribute("aria-pressed", String(isSelected));
+        });
+
+        portfolioCards.forEach((card) => {
+          const cardCategory = card.dataset.category;
+          const shouldDisplay =
+            selectedFilter === "all" || cardCategory === selectedFilter;
+
+          card.hidden = !shouldDisplay;
+        });
+      });
+    });
+  });
