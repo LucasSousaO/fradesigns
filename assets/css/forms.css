@@ -1,0 +1,265 @@
+/* ==========================================================
+   FORMS.CSS
+   Fradesign Global
+   ========================================================== */
+
+/* ==========================================================
+   FORM
+   ========================================================== */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+/* ==========================================================
+   LABELS
+   ========================================================== */
+
+.form-label {
+    color: var(--color-text);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+}
+
+.form-label-required::after {
+    content: " *";
+    color: var(--color-error);
+}
+
+/* ==========================================================
+   INPUTS
+   ========================================================== */
+
+.form-input,
+.form-textarea,
+.form-select {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    color: var(--color-text);
+    background: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    font-family: inherit;
+    font-size: var(--font-size-md);
+    line-height: 1.5;
+
+    transition:
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast),
+        background var(--transition-fast);
+}
+
+.form-input:hover,
+.form-textarea:hover,
+.form-select:hover {
+    border-color: var(--color-primary);
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+    border-color: var(--color-primary);
+
+    outline: none;
+
+    box-shadow: 0 0 0 4px rgba(31, 111, 92, .12);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: var(--color-text-light);
+    opacity: .75;
+}
+
+/* ==========================================================
+   TEXTAREA
+   ========================================================== */
+
+.form-textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+/* ==========================================================
+   SELECT
+   ========================================================== */
+
+.form-select {
+    appearance: none;
+
+    padding-right: 44px;
+
+    background-image:
+        linear-gradient(45deg, transparent 50%, var(--color-text-light) 50%),
+        linear-gradient(135deg, var(--color-text-light) 50%, transparent 50%);
+
+    background-position:
+        calc(100% - 18px) 50%,
+        calc(100% - 13px) 50%;
+
+    background-size:
+        5px 5px,
+        5px 5px;
+
+    background-repeat: no-repeat;
+}
+
+/* ==========================================================
+   HELP TEXT
+   ========================================================== */
+
+.form-help {
+    color: var(--color-text-light);
+    font-size: var(--font-size-xs);
+    line-height: 1.5;
+}
+
+/* ==========================================================
+   VALIDATION
+   ========================================================== */
+
+.form-input.is-valid,
+.form-textarea.is-valid,
+.form-select.is-valid {
+    border-color: var(--color-success);
+}
+
+.form-input.is-invalid,
+.form-textarea.is-invalid,
+.form-select.is-invalid {
+    border-color: var(--color-error);
+}
+
+.form-error {
+    color: var(--color-error);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+}
+
+.form-success {
+    color: var(--color-success);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+}
+
+/* ==========================================================
+   CHECKBOX AND RADIO
+   ========================================================== */
+
+.form-check {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+}
+
+.form-check input {
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+
+    accent-color: var(--color-primary);
+
+    flex-shrink: 0;
+}
+
+.form-check label {
+    color: var(--color-text-light);
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+}
+
+/* ==========================================================
+   FORM ACTIONS
+   ========================================================== */
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+/* ==========================================================
+   FORM FEEDBACK
+   ========================================================== */
+
+.form-message {
+    padding: var(--space-md) var(--space-lg);
+
+    border-radius: var(--radius-md);
+
+    font-size: var(--font-size-sm);
+    line-height: 1.5;
+}
+
+.form-message-success {
+    color: var(--color-success);
+    background: rgba(30, 142, 90, .10);
+    border: 1px solid rgba(30, 142, 90, .25);
+}
+
+.form-message-error {
+    color: var(--color-error);
+    background: rgba(192, 57, 43, .10);
+    border: 1px solid rgba(192, 57, 43, .25);
+}
+
+/* ==========================================================
+   CONTACT FORM
+   ========================================================== */
+
+.contact-form {
+    max-width: 760px;
+    margin-inline: auto;
+}
+
+.contact-form .form-actions {
+    margin-top: var(--space-sm);
+}
+
+/* ==========================================================
+   DISABLED
+   ========================================================== */
+
+.form-input:disabled,
+.form-textarea:disabled,
+.form-select:disabled {
+    cursor: not-allowed;
+    opacity: .6;
+    background: var(--color-surface-alt);
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+}

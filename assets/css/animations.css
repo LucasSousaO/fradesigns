@@ -1,0 +1,415 @@
+/* ==========================================================
+   ANIMATIONS.CSS
+   Fradesign Global
+   ========================================================== */
+
+/* ==========================================================
+   GLOBAL TRANSITIONS
+   ========================================================== */
+
+* {
+    transition:
+        color var(--transition-fast),
+        background-color var(--transition-fast),
+        border-color var(--transition-fast);
+}
+
+/* ==========================================================
+   REVEAL
+   ========================================================== */
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+
+}
+
+.reveal.in {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+/* ==========================================================
+   FADE
+   ========================================================== */
+
+.fade-in {
+
+    animation: fadeIn .7s ease forwards;
+
+}
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+    }
+
+}
+
+/* ==========================================================
+   FADE UP
+   ========================================================== */
+
+.fade-up {
+
+    animation: fadeUp .7s ease forwards;
+
+}
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(24px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* ==========================================================
+   FADE DOWN
+   ========================================================== */
+
+.fade-down {
+
+    animation: fadeDown .7s ease forwards;
+
+}
+
+@keyframes fadeDown {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(-24px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* ==========================================================
+   SCALE
+   ========================================================== */
+
+.scale-in {
+
+    animation: scaleIn .45s ease forwards;
+
+}
+
+@keyframes scaleIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(.95);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+/* ==========================================================
+   FLOAT
+   ========================================================== */
+
+.float {
+
+    animation: float 6s ease-in-out infinite;
+
+}
+
+@keyframes float {
+
+    0% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-10px);
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* ==========================================================
+   PULSE
+   ========================================================== */
+
+.pulse {
+
+    animation: pulse 2.5s infinite;
+
+}
+
+@keyframes pulse {
+
+    0% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.04);
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+    }
+
+}
+
+/* ==========================================================
+   ROTATE
+   ========================================================== */
+
+.rotate {
+
+    animation: rotate 14s linear infinite;
+
+}
+
+@keyframes rotate {
+
+    from {
+
+        transform: rotate(0deg);
+
+    }
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+/* ==========================================================
+   SHINE
+   ========================================================== */
+
+.shine {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.shine::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    transform: translateX(-120%) skewX(-20deg);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.25),
+            transparent
+        );
+
+}
+
+.shine:hover::after {
+
+    animation: shine .9s ease;
+
+}
+
+@keyframes shine {
+
+    to {
+
+        transform: translateX(120%) skewX(-20deg);
+
+    }
+
+}
+
+/* ==========================================================
+   HOVER LIFT
+   ========================================================== */
+
+.hover-lift {
+
+    transition:
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast);
+
+}
+
+.hover-lift:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: var(--shadow-lg);
+
+}
+
+/* ==========================================================
+   HOVER SCALE
+   ========================================================== */
+
+.hover-scale {
+
+    transition: transform var(--transition-fast);
+
+}
+
+.hover-scale:hover {
+
+    transform: scale(1.03);
+
+}
+
+/* ==========================================================
+   STAGGER
+   ========================================================== */
+
+.stagger > * {
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+}
+
+.stagger.in > * {
+
+    animation: staggerReveal .6s forwards;
+
+}
+
+.stagger.in > *:nth-child(1) {
+
+    animation-delay: .05s;
+
+}
+
+.stagger.in > *:nth-child(2) {
+
+    animation-delay: .12s;
+
+}
+
+.stagger.in > *:nth-child(3) {
+
+    animation-delay: .19s;
+
+}
+
+.stagger.in > *:nth-child(4) {
+
+    animation-delay: .26s;
+
+}
+
+.stagger.in > *:nth-child(5) {
+
+    animation-delay: .33s;
+
+}
+
+.stagger.in > *:nth-child(6) {
+
+    animation-delay: .40s;
+
+}
+
+@keyframes staggerReveal {
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* ==========================================================
+   REDUCED MOTION
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation: none !important;
+
+        transition: none !important;
+
+        scroll-behavior: auto !important;
+
+    }
+
+}

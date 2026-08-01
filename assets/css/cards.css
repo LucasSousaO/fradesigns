@@ -1,0 +1,345 @@
+/* ==========================================================
+   CARDS.CSS
+   Fradesign Global
+   ========================================================== */
+
+/* ==========================================================
+   BASE CARD
+   ========================================================== */
+
+.card {
+
+    background: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-lg);
+
+    padding: var(--space-xl);
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        border-color var(--transition-fast);
+
+}
+
+.card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: var(--shadow-md);
+
+    border-color: var(--color-primary);
+
+}
+
+/* ==========================================================
+   CARD TITLE
+   ========================================================== */
+
+.card h3 {
+
+    margin-bottom: var(--space-md);
+
+    color: var(--color-text);
+
+}
+
+/* ==========================================================
+   CARD DESCRIPTION
+   ========================================================== */
+
+.card p {
+
+    color: var(--color-text-light);
+
+    margin-bottom: 0;
+
+}
+
+/* ==========================================================
+   SERVICE CARD
+   ========================================================== */
+
+.service-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--space-md);
+
+}
+
+.service-card svg {
+
+    width: 40px;
+
+    height: 40px;
+
+    color: var(--color-primary);
+
+}
+
+.service-card h3 {
+
+    font-size: 1.25rem;
+
+}
+
+.service-card p {
+
+    flex: 1;
+
+}
+
+/* ==========================================================
+   TRUST CARD
+   ========================================================== */
+
+.trust-card {
+
+    text-align: center;
+
+}
+
+.trust-card strong {
+
+    display: block;
+
+    font-size: var(--font-size-3xl);
+
+    color: var(--color-primary);
+
+    margin-bottom: var(--space-xs);
+
+}
+
+.trust-card span {
+
+    display: block;
+
+    color: var(--color-text-light);
+
+}
+
+/* ==========================================================
+   WHO CARD
+   ========================================================== */
+
+.who-card {
+
+    text-align: center;
+
+}
+
+.who-card svg {
+
+    margin: 0 auto var(--space-lg);
+
+    width: 48px;
+
+    height: 48px;
+
+    color: var(--color-primary);
+
+}
+
+/* ==========================================================
+   AVAILABILITY CARD
+   ========================================================== */
+
+.avail-card {
+
+    text-align: center;
+
+    padding: var(--space-2xl);
+
+}
+
+.avail-card strong {
+
+    display: block;
+
+    font-size: var(--font-size-4xl);
+
+    color: var(--color-primary);
+
+    margin-bottom: var(--space-sm);
+
+}
+
+.avail-card span {
+
+    display: block;
+
+    color: var(--color-text-light);
+
+}
+
+/* ==========================================================
+   PORTFOLIO CARD
+   ========================================================== */
+
+.work-item {
+
+    overflow: hidden;
+
+    border-radius: var(--radius-lg);
+
+    background: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast);
+
+}
+
+.work-item:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: var(--shadow-lg);
+
+}
+
+.work-item img {
+
+    width: 100%;
+
+    display: block;
+
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+
+}
+
+.work-item-content {
+
+    padding: var(--space-lg);
+
+}
+
+.work-item h3 {
+
+    margin-bottom: var(--space-sm);
+
+}
+
+.work-item p {
+
+    margin-bottom: 0;
+
+}
+
+/* ==========================================================
+   CONTACT CARD
+   ========================================================== */
+
+.contact-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--space-md);
+
+    text-align: center;
+
+}
+
+.contact-card svg {
+
+    width: 42px;
+
+    height: 42px;
+
+    color: var(--color-primary);
+
+    margin: 0 auto;
+
+}
+
+/* ==========================================================
+   FEATURE CARD
+   ========================================================== */
+
+.feature-card {
+
+    display: flex;
+
+    gap: var(--space-lg);
+
+    align-items: flex-start;
+
+}
+
+.feature-card svg {
+
+    width: 32px;
+
+    height: 32px;
+
+    flex-shrink: 0;
+
+    color: var(--color-primary);
+
+}
+
+.feature-card-content {
+
+    flex: 1;
+
+}
+
+/* ==========================================================
+   ICON BOX
+   ========================================================== */
+
+.icon-box {
+
+    width: 64px;
+
+    height: 64px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(31,111,92,.08);
+
+    color: var(--color-primary);
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width:768px){
+
+    .card{
+
+        padding:var(--space-lg);
+
+    }
+
+    .avail-card strong{
+
+        font-size:var(--font-size-3xl);
+
+    }
+
+}

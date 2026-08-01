@@ -1,0 +1,23 @@
+{
+    "name": "Fradesign",
+    "short_name": "Fradesign",
+    "description": "Visual Identity, Social Media Design and Video Editing for businesses worldwide.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#1f6f5c",
+    "orientation": "portrait-primary",
+    "lang": "en",
+    "icons": [
+        {
+            "src": "/assets/images/favicon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/favicon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

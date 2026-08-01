@@ -1,0 +1,149 @@
+/* ==========================================================
+   VARIABLES
+   Fradesign Global
+   ========================================================== */
+
+:root {
+
+  /* ========================================================
+     COLORS
+     ======================================================== */
+
+  --color-primary: #d74893;
+  --color-primary-hover: #6f2064;
+
+  --color-accent: #D6B36A;
+
+  --color-background: #FAFAF8;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F5F4F1;
+
+  --color-text: #16161A;
+  --color-text-light: #575B63;
+
+  --color-border: #E8E6E1;
+
+  --color-success: #1E8E5A;
+  --color-warning: #D79A00;
+  --color-error: #C0392B;
+
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+
+  /* ========================================================
+     TYPOGRAPHY
+     ======================================================== */
+
+  --font-primary: "Inter", sans-serif;
+
+  --font-size-xs: .75rem;
+  --font-size-sm: .875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 3rem;
+  --font-size-4xl: 4rem;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.6;
+  --line-height-loose: 1.8;
+
+  /* ========================================================
+     SPACING
+     ======================================================== */
+
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+  --space-5xl: 128px;
+
+  /* ========================================================
+     LAYOUT
+     ======================================================== */
+
+  --container-width: 1240px;
+
+  --section-padding: 96px;
+
+  --content-width: 760px;
+
+  /* ========================================================
+     BORDER RADIUS
+     ======================================================== */
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  /* ========================================================
+     SHADOWS
+     ======================================================== */
+
+  --shadow-sm:
+      0 2px 8px rgba(0,0,0,.04);
+
+  --shadow-md:
+      0 8px 24px rgba(0,0,0,.08);
+
+  --shadow-lg:
+      0 20px 60px rgba(0,0,0,.12);
+
+  /* ========================================================
+     TRANSITIONS
+     ======================================================== */
+
+  --transition-fast: .15s ease;
+
+  --transition-normal: .30s ease;
+
+  --transition-slow: .45s ease;
+
+  /* ========================================================
+     Z-INDEX
+     ======================================================== */
+
+  --z-header: 100;
+  --z-dropdown: 200;
+  --z-modal: 500;
+  --z-toast: 1000;
+
+}
+
+
+/* ==========================================================
+   DARK MODE SUPPORT
+   ========================================================== */
+
+@media (prefers-color-scheme: dark) {
+
+  :root {
+
+    --color-background: #111114;
+
+    --color-surface: #19191D;
+
+    --color-surface-alt: #242428;
+
+    --color-text: #F5F5F5;
+
+    --color-text-light: #B5B5BC;
+
+    --color-border: #323238;
+
+  }
+
+}

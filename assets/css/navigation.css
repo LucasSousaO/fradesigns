@@ -1,0 +1,396 @@
+/* ==========================================================
+   NAVIGATION.CSS
+   Fradesign Global
+   ========================================================== */
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.site-header {
+
+    position: sticky;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    z-index: var(--z-header);
+
+    background: rgba(255,255,255,.92);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid var(--color-border);
+
+    transition:
+        background var(--transition-fast),
+        box-shadow var(--transition-fast);
+
+}
+
+.site-header.scrolled {
+
+    box-shadow: var(--shadow-sm);
+
+}
+
+/* ==========================================================
+   NAV
+   ========================================================== */
+
+.nav {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    min-height: 78px;
+
+}
+
+/* ==========================================================
+   LOGO
+   ========================================================== */
+
+.logo {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: var(--space-sm);
+
+    font-size: 1.35rem;
+
+    font-weight: var(--font-weight-bold);
+
+    color: var(--color-text);
+
+}
+
+.logo img {
+
+    height: 40px;
+
+    width: auto;
+
+}
+
+/* ==========================================================
+   MENU
+   ========================================================== */
+
+.nav ul {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: var(--space-xl);
+
+}
+
+.nav li {
+
+    display: flex;
+
+}
+
+.nav a {
+
+    position: relative;
+
+    color: var(--color-text);
+
+    font-weight: var(--font-weight-medium);
+
+    transition: color var(--transition-fast);
+
+}
+
+.nav a:hover {
+
+    color: var(--color-primary);
+
+}
+
+.nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -8px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: var(--color-primary);
+
+    transition: width var(--transition-fast);
+
+}
+
+.nav a:hover::after {
+
+    width: 100%;
+
+}
+
+/* ==========================================================
+   NAV ACTIONS
+   ========================================================== */
+
+.nav-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: var(--space-md);
+
+}
+
+/* ==========================================================
+   LANGUAGE SWITCHER
+   ========================================================== */
+
+.lang-switch {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    padding: 4px;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-pill);
+
+    background: var(--color-surface);
+
+}
+
+.lang-btn {
+
+    padding: 8px 12px;
+
+    border-radius: var(--radius-pill);
+
+    font-size: var(--font-size-sm);
+
+    font-weight: var(--font-weight-semibold);
+
+    transition:
+        background var(--transition-fast),
+        color var(--transition-fast);
+
+}
+
+.lang-btn:hover {
+
+    background: var(--color-surface-alt);
+
+}
+
+.lang-btn.active {
+
+    background: var(--color-primary);
+
+    color: var(--color-white);
+
+}
+
+/* ==========================================================
+   MOBILE BUTTON
+   ========================================================== */
+
+.burger {
+
+    display: none;
+
+    width: 44px;
+
+    height: 44px;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: var(--radius-md);
+
+    transition: background var(--transition-fast);
+
+}
+
+.burger:hover {
+
+    background: var(--color-surface-alt);
+
+}
+
+.burger svg {
+
+    width: 24px;
+
+    height: 24px;
+
+}
+
+/* ==========================================================
+   MOBILE MENU
+   ========================================================== */
+
+.mobile-menu {
+
+    position: fixed;
+
+    top: 0;
+
+    right: -100%;
+
+    width: min(340px, 100%);
+
+    height: 100vh;
+
+    background: var(--color-surface);
+
+    padding: 96px 32px 32px;
+
+    box-shadow: var(--shadow-lg);
+
+    transition: right .35s ease;
+
+    z-index: calc(var(--z-header) + 1);
+
+}
+
+.mobile-menu.open {
+
+    right: 0;
+
+}
+
+.mobile-menu nav {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--space-lg);
+
+}
+
+.mobile-menu a {
+
+    font-size: var(--font-size-lg);
+
+    font-weight: var(--font-weight-medium);
+
+}
+
+.mobile-lang {
+
+    display: flex;
+
+    gap: var(--space-sm);
+
+    margin-top: var(--space-xl);
+
+}
+
+/* ==========================================================
+   OVERLAY
+   ========================================================== */
+
+.mobile-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.45);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity var(--transition-fast),
+        visibility var(--transition-fast);
+
+    z-index: var(--z-header);
+
+}
+
+.mobile-overlay.open {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width:1024px){
+
+    .nav ul{
+
+        display:none;
+
+    }
+
+    .nav-actions{
+
+        display:none;
+
+    }
+
+    .burger{
+
+        display:flex;
+
+    }
+
+}
+
+@media (min-width:1025px){
+
+    .mobile-menu{
+
+        display:none;
+
+    }
+
+    .mobile-overlay{
+
+        display:none;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .logo{
+
+        font-size:1.2rem;
+
+    }
+
+}

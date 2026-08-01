@@ -1,0 +1,269 @@
+/* ==========================================================
+   FAQ.CSS
+   Fradesign Global
+   ========================================================== */
+
+/* ==========================================================
+   FAQ SECTION
+   ========================================================== */
+
+.faq {
+
+    max-width: 900px;
+
+    margin-inline: auto;
+
+}
+
+/* ==========================================================
+   FAQ LIST
+   ========================================================== */
+
+.faq-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--space-md);
+
+}
+
+/* ==========================================================
+   FAQ ITEM
+   ========================================================== */
+
+.faq-item {
+
+    background: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-lg);
+
+    overflow: hidden;
+
+    transition:
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast);
+
+}
+
+.faq-item:hover {
+
+    border-color: var(--color-primary);
+
+    box-shadow: var(--shadow-sm);
+
+}
+
+/* ==========================================================
+   DETAILS
+   ========================================================== */
+
+.faq-item details {
+
+    width: 100%;
+
+}
+
+.faq-item details[open] {
+
+    background: var(--color-surface);
+
+}
+
+/* ==========================================================
+   SUMMARY
+   ========================================================== */
+
+.faq-item summary {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: var(--space-lg);
+
+    padding: var(--space-lg);
+
+    cursor: pointer;
+
+    list-style: none;
+
+    user-select: none;
+
+    font-weight: var(--font-weight-semibold);
+
+    color: var(--color-text);
+
+    transition: color var(--transition-fast);
+
+}
+
+.faq-item summary:hover {
+
+    color: var(--color-primary);
+
+}
+
+.faq-item summary::-webkit-details-marker {
+
+    display: none;
+
+}
+
+/* ==========================================================
+   ICON
+   ========================================================== */
+
+.faq-item summary::after {
+
+    content: "+";
+
+    flex-shrink: 0;
+
+    font-size: 1.4rem;
+
+    font-weight: var(--font-weight-bold);
+
+    color: var(--color-primary);
+
+    transition: transform var(--transition-fast);
+
+}
+
+.faq-item details[open] summary::after {
+
+    content: "−";
+
+}
+
+/* ==========================================================
+   ANSWER
+   ========================================================== */
+
+.faq-answer {
+
+    padding:
+
+        0
+
+        var(--space-lg)
+
+        var(--space-lg);
+
+}
+
+.faq-answer p {
+
+    margin: 0;
+
+    color: var(--color-text-light);
+
+    line-height: var(--line-height-loose);
+
+}
+
+/* ==========================================================
+   LINKS INSIDE FAQ
+   ========================================================== */
+
+.faq-answer a {
+
+    color: var(--color-primary);
+
+    font-weight: var(--font-weight-medium);
+
+}
+
+.faq-answer a:hover {
+
+    text-decoration: underline;
+
+}
+
+/* ==========================================================
+   EMPHASIS
+   ========================================================== */
+
+.faq-answer strong {
+
+    color: var(--color-text);
+
+}
+
+.faq-answer ul {
+
+    margin-top: var(--space-md);
+
+    padding-left: var(--space-lg);
+
+    list-style: disc;
+
+}
+
+.faq-answer li {
+
+    margin-bottom: var(--space-sm);
+
+    color: var(--color-text-light);
+
+}
+
+/* ==========================================================
+   ANIMATION
+   ========================================================== */
+
+.faq-item details[open] .faq-answer {
+
+    animation: faqFade .25s ease;
+
+}
+
+@keyframes faqFade {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(-6px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width:768px){
+
+    .faq-item summary{
+
+        padding:var(--space-md);
+
+        font-size:var(--font-size-md);
+
+    }
+
+    .faq-answer{
+
+        padding:
+            0
+            var(--space-md)
+            var(--space-md);
+
+    }
+
+}

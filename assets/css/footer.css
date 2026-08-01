@@ -1,0 +1,253 @@
+/* ==========================================================
+   FOOTER.CSS
+   Fradesign Global
+   ========================================================== */
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+
+.site-footer {
+    padding: var(--space-3xl) 0;
+
+    background: var(--color-background);
+
+    border-top: 1px solid var(--color-border);
+}
+
+/* ==========================================================
+   FOOTER LAYOUT
+   ========================================================== */
+
+.site-footer .container {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: var(--space-lg);
+
+    flex-wrap: wrap;
+}
+
+/* ==========================================================
+   FOOTER COPY
+   ========================================================== */
+
+.footer-copy {
+    color: var(--color-text-light);
+
+    font-size: var(--font-size-sm);
+}
+
+/* ==========================================================
+   FOOTER LINKS
+   ========================================================== */
+
+.footer-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: var(--space-lg);
+
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: var(--color-text-light);
+
+    font-size: var(--font-size-sm);
+
+    font-weight: var(--font-weight-medium);
+
+    transition: color var(--transition-fast);
+}
+
+.footer-links a:hover {
+    color: var(--color-primary);
+}
+
+/* ==========================================================
+   FOOTER BRAND
+   ========================================================== */
+
+.footer-brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: var(--space-sm);
+
+    color: var(--color-text);
+
+    font-weight: var(--font-weight-bold);
+}
+
+.footer-brand img {
+    width: auto;
+
+    height: 36px;
+}
+
+/* ==========================================================
+   FOOTER SOCIAL LINKS
+   ========================================================== */
+
+.footer-social {
+    display: flex;
+
+    align-items: center;
+
+    gap: var(--space-sm);
+}
+
+.footer-social a {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 40px;
+
+    height: 40px;
+
+    color: var(--color-text-light);
+
+    background: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 50%;
+
+    transition:
+        color var(--transition-fast),
+        background var(--transition-fast),
+        border-color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.footer-social a:hover {
+    color: var(--color-white);
+
+    background: var(--color-primary);
+
+    border-color: var(--color-primary);
+
+    transform: translateY(-2px);
+}
+
+.footer-social svg {
+    width: 18px;
+
+    height: 18px;
+}
+
+/* ==========================================================
+   FOOTER LANGUAGE LINKS
+   ========================================================== */
+
+.footer-language {
+    display: flex;
+
+    align-items: center;
+
+    gap: var(--space-xs);
+}
+
+.footer-language a {
+    padding: 6px 10px;
+
+    color: var(--color-text-light);
+
+    border-radius: var(--radius-sm);
+
+    font-size: var(--font-size-xs);
+
+    font-weight: var(--font-weight-semibold);
+}
+
+.footer-language a:hover,
+.footer-language a.active {
+    color: var(--color-white);
+
+    background: var(--color-primary);
+}
+
+/* ==========================================================
+   FOOTER LEGAL
+   ========================================================== */
+
+.footer-legal {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: var(--space-md);
+
+    margin-top: var(--space-xl);
+
+    padding-top: var(--space-lg);
+
+    border-top: 1px solid var(--color-border);
+
+    flex-wrap: wrap;
+}
+
+.footer-legal p {
+    margin: 0;
+
+    color: var(--color-text-light);
+
+    font-size: var(--font-size-xs);
+}
+
+.footer-legal-links {
+    display: flex;
+
+    gap: var(--space-md);
+
+    flex-wrap: wrap;
+}
+
+.footer-legal-links a {
+    color: var(--color-text-light);
+
+    font-size: var(--font-size-xs);
+}
+
+.footer-legal-links a:hover {
+    color: var(--color-primary);
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+    .site-footer .container {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .footer-links,
+    .footer-social,
+    .footer-language {
+        width: 100%;
+    }
+
+    .footer-legal {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
