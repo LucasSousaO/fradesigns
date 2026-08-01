@@ -56,6 +56,7 @@
   <link rel="stylesheet" href="assets/css/availability.css">
   <link rel="stylesheet" href="assets/css/footer.css">
   <link rel="stylesheet" href="assets/css/sections.css">
+  <link rel="stylesheet" href="assets/css/work-section.css">
   <link rel="stylesheet" href="assets/css/animations.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
@@ -310,604 +311,89 @@
         </div>
       </div>
     </section>
-
-    <section id="work" class="work-section">
+<section class="work-section" id="work">
   <div class="container">
-    <div class="section-head reveal">
-      <p class="eyebrow">Portfólio</p>
-      <h2>Projetos que transformam ideias em comunicação</h2>
-    </div>
-
-    <p class="work-note reveal">
-      Desenvolvemos conteúdos digitais, audiovisuais e impressos para fortalecer
-      a comunicação de empresas, produtos e projetos. Conheça algumas das nossas
-      entregas em vídeo, redes sociais, comunicação corporativa e materiais
-      promocionais.
-    </p>
-
-    <div class="portfolio-filters reveal" aria-label="Filtrar projetos">
-      <button
-        type="button"
-        class="portfolio-filter is-active"
-        data-filter="all"
-        aria-pressed="true"
-      >
-        Todos
+    <div class="work-tabs" role="tablist" aria-label="Filtrar trabalhos">
+      <button class="work-tab is-active" type="button" data-filter="all" aria-selected="true">
+        All
       </button>
-
-      <button
-        type="button"
-        class="portfolio-filter"
-        data-filter="video"
-        aria-pressed="false"
-      >
+      <button class="work-tab" type="button" data-filter="comunicacao-corporativa" aria-selected="false">
+        Corporate communication
+      </button>
+      <button class="work-tab" type="button" data-filter="embalagens" aria-selected="false">
+        Products
+      </button>
+      <button class="work-tab" type="button" data-filter="materiais-impressos" aria-selected="false">
+Marketing Assets
+      </button>
+      <button class="work-tab" type="button" data-filter="redes-sociais" aria-selected="false">
+        Social Media
+      </button>
+      <button class="work-tab" type="button" data-filter="videos" aria-selected="false">
         Vídeos
       </button>
-
-      <button
-        type="button"
-        class="portfolio-filter"
-        data-filter="social"
-        aria-pressed="false"
-      >
-        Redes sociais
-      </button>
-
-      <button
-        type="button"
-        class="portfolio-filter"
-        data-filter="corporativo"
-        aria-pressed="false"
-      >
-        Comunicação corporativa
-      </button>
-
-      <button
-        type="button"
-        class="portfolio-filter"
-        data-filter="impresso"
-        aria-pressed="false"
-      >
-        Materiais impressos
-      </button>
-
-      <button
-        type="button"
-        class="portfolio-filter"
-        data-filter="embalagem"
-        aria-pressed="false"
-      >
-        Embalagens
-      </button>
     </div>
 
-    <div class="portfolio-grid">
-      <!-- VÍDEO 01 -->
-      <article
-        class="portfolio-card reveal"
-        data-category="video"
-      >
-        <a
-          href="https://www.linkedin.com/posts/dataenergyamerica_data-transformers-engineering-activity-7467213379586244609-hD5e"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Assistir ao projeto Transformers Engineering no LinkedIn"
-        >
-          <div class="portfolio-media">
-            <img
-              src="assets/img/portfolio/data-energy-transformers.jpg"
-              alt="Produção de vídeo técnico para a Data Energy"
-              loading="lazy"
-              decoding="async"
-            />
+    <div class="work-gallery">
+      <a class="work-item work-item--large" data-category="comunicacao-corporativa" href="#contato">
+        <img src="assets/work/corporativo-liderancas.webp" alt="Programa Lideranças do Futuro" loading="lazy">
+      </a>
 
-            <span class="portfolio-type">Vídeo</span>
+      <a class="work-item" data-category="comunicacao-corporativa" href="#contato">
+        <img src="assets/work/corporativo-barbosa-mello.webp" alt="Construtora Barbosa Mello" loading="lazy">
+      </a>
 
-            <span class="portfolio-play" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z"></path>
-              </svg>
-            </span>
-          </div>
+      <a class="work-item" data-category="comunicacao-corporativa" href="#contato">
+        <img src="assets/work/corporativo-morada-ai.webp" alt="Morada.ai" loading="lazy">
+      </a>
 
-          <div class="portfolio-content">
-            <p class="portfolio-client">Data Energy</p>
-            <h3>Transformers Engineering</h3>
-            <p>
-              Produção audiovisual para apresentar conhecimento técnico,
-              capacidade industrial e soluções para o setor de energia.
-            </p>
-            <span class="portfolio-link">Assistir ao projeto</span>
-          </div>
-        </a>
-      </article>
+      <a class="work-item work-item--wide" data-category="embalagens" href="#contato">
+        <img src="assets/work/embalagem-grand-imper.webp" alt="Embalagem Grand Imper" loading="lazy">
+      </a>
 
-      <!-- VÍDEO 02 -->
-      <article
-        class="portfolio-card reveal"
-        data-category="video"
-      >
-        <a
-          href="https://www.linkedin.com/posts/dataenergyamerica_dataenergyamerica-ieeepes-td2026-activity-7454529839346151424-WRIU"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Assistir ao projeto IEEE PES T&D 2026 no LinkedIn"
-        >
-          <div class="portfolio-media">
-            <img
-              src="assets/img/portfolio/data-energy-ieee-pes.jpg"
-              alt="Cobertura audiovisual da participação da Data Energy no IEEE PES"
-              loading="lazy"
-              decoding="async"
-            />
+      <a class="work-item" data-category="materiais-impressos" href="#contato">
+        <img src="assets/work/impresso-cimcop-diversidade.webp" alt="Material impresso CIMCOP sobre diversidade" loading="lazy">
+      </a>
 
-            <span class="portfolio-type">Cobertura de evento</span>
+      <a class="work-item" data-category="materiais-impressos" href="#contato">
+        <img src="assets/work/impresso-cimcop-queimaduras.webp" alt="Material impresso CIMCOP sobre queimaduras" loading="lazy">
+      </a>
 
-            <span class="portfolio-play" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z"></path>
-              </svg>
-            </span>
-          </div>
+      <a class="work-item work-item--wide" data-category="materiais-impressos" href="#contato">
+        <img src="assets/work/impresso-oxigenoterapia.webp" alt="Folder sobre oxigenoterapia hiperbárica" loading="lazy">
+      </a>
 
-          <div class="portfolio-content">
-            <p class="portfolio-client">Data Energy America</p>
-            <h3>IEEE PES T&amp;D 2026</h3>
-            <p>
-              Conteúdo audiovisual para registrar a presença da empresa em um
-              dos principais eventos internacionais do setor elétrico.
-            </p>
-            <span class="portfolio-link">Assistir ao projeto</span>
-          </div>
-        </a>
-      </article>
+      <a class="work-item" data-category="redes-sociais"
+         href="https://www.instagram.com/p/DZ5i31JEacR/"
+         target="_blank" rel="noopener noreferrer">
+        <img src="assets/work/social-cimcop-diversidade.webp" alt="Conteúdo para redes sociais" loading="lazy">
+      </a>
 
-      <!-- VÍDEO 03 -->
-      <article
-        class="portfolio-card reveal"
-        data-category="video"
-      >
-        <a
-          href="https://www.linkedin.com/posts/dataenergia_data-transformadores-powertransformers-activity-7449803659359481856-qLjF"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Assistir ao projeto Power Transformers no LinkedIn"
-        >
-          <div class="portfolio-media">
-            <img
-              src="assets/img/portfolio/data-power-transformers.jpg"
-              alt="Vídeo institucional sobre transformadores de potência"
-              loading="lazy"
-              decoding="async"
-            />
+      <a class="work-item" data-category="videos"
+         href="https://www.linkedin.com/posts/dataenergia_data-transformadores-powertransformers-activity-7449803659359481856-qLjF"
+         target="_blank" rel="noopener noreferrer">
+        <img src="assets/work/video-data-evento.webp" alt="Vídeo institucional DATA" loading="lazy">
+      </a>
 
-            <span class="portfolio-type">Vídeo institucional</span>
+      <div class="work-item instagram" data-category="videos">
+  <blockquote
+    class="instagram-media"
+    data-instgrm-permalink="https://www.instagram.com/reel/DTa-yl-mL27/"
+    data-instgrm-version="14"
+  ></blockquote>
+</div>
 
-            <span class="portfolio-play" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z"></path>
-              </svg>
-            </span>
-          </div>
-
-          <div class="portfolio-content">
-            <p class="portfolio-client">DATA Engenharia</p>
-            <h3>Power Transformers</h3>
-            <p>
-              Vídeo institucional voltado à apresentação de soluções técnicas,
-              estrutura e atuação no mercado industrial.
-            </p>
-            <span class="portfolio-link">Assistir ao projeto</span>
-          </div>
-        </a>
-      </article>
-
-      <!-- VÍDEO 04 -->
-      <article
-        class="portfolio-card reveal"
-        data-category="video"
-      >
-        <a
-          href="https://www.instagram.com/reel/DTa-yl-mL27/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Assistir ao projeto audiovisual no Instagram"
-        >
-          <div class="portfolio-media">
-            <img
-              src="assets/img/portfolio/video-instagram-01.jpg"
-              alt="Produção de conteúdo audiovisual para redes sociais"
-              loading="lazy"
-              decoding="async"
-            />
-
-            <span class="portfolio-type">Reels</span>
-
-            <span class="portfolio-play" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z"></path>
-              </svg>
-            </span>
-          </div>
-
-          <div class="portfolio-content">
-            <p class="portfolio-client">Conteúdo digital</p>
-            <h3>Vídeo para redes sociais</h3>
-            <p>
-              Planejamento visual, edição e finalização de conteúdo em formato
-              vertical para comunicação de marca.
-            </p>
-            <span class="portfolio-link">Assistir ao projeto</span>
-          </div>
-        </a>
-      </article>
-
-      <!-- SOCIAL MEDIA 01 -->
-      <article
-        class="portfolio-card reveal"
-        data-category="social"
-      >
-        <a
-          href="https://www.linkedin.com/posts/dataenergyamerica_safeharbor-dataenergyamerica-transformers-activity-7376963710856159232-qLrJ"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Ver campanha Safe Harbor no LinkedIn"
-        >
-          <div class="portfolio-media">
-            <img
-              src="assets/img/portfolio/data-energy-safe-harbor.jpg"
-              alt="Conteúdo para redes sociais da campanha Safe Harbor"
-              loading="lazy"
-              decoding="async"
-            />
-
-            <span class="portfolio-type">Redes sociais</span>
-          </div>
-
-          <div class="portfolio-content">
-            <p class="portfolio-client">Data Energy America</p>
-            <h3>Campanha Safe Harbor</h3>
-            <p>
-              Desenvolvimento de conteúdo visual para apoiar a comunicação
-              institucional e o posicionamento da empresa nas redes sociais.
-            </p>
-            <span class="portfolio-link">Ver publicação</span>
-          </div>
-        </a>
-      </article>
-
-      <!-- SOCIAL MEDIA 02 -->
-      <article
-        class="portfolio-card reveal"
-        data-category="social"
-      >
-        <a
-          href="https://www.linkedin.com/posts/dataenergia_data-servicosemcampo-manutencaotransformador-activity-7416886769402417152-Ospg"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Ver publicação sobre serviços em campo no LinkedIn"
-        >
-          <div class="portfolio-media">
-            <img
-              src="assets/img/portfolio/data-servicos-em-campo.jpg"
-              alt="Conteúdo técnico sobre serviços de manutenção em campo"
-              loading="lazy"
-              decoding="async"
-            />
-
-            <span class="portfolio-type">Conteúdo técnico</span>
-          </div>
-
-          <div class="portfolio-content">
-            <p class="portfolio-client">DATA Engenharia</p>
-            <h3>Serviços em campo</h3>
-            <p>
-              Criação de conteúdo técnico para divulgar serviços especializados
-              de manutenção e atendimento industrial.
-            </p>
-            <span class="portfolio-link">Ver publicação</span>
-          </div>
-        </a>
-      </article>
-
-      <!-- SOCIAL MEDIA 03 -->
-      <article
-        class="portfolio-card reveal"
-        data-category="social"
-      >
-        <a
-          href="https://www.instagram.com/p/DZ5i31JEacR/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Ver projeto de conteúdo para redes sociais no Instagram"
-        >
-          <div class="portfolio-media">
-            <img
-              src="assets/img/portfolio/social-media-corporativo.jpg"
-              alt="Projeto de conteúdo corporativo para redes sociais"
-              loading="lazy"
-              decoding="async"
-            />
-
-            <span class="portfolio-type">Campanha digital</span>
-          </div>
-
-          <div class="portfolio-content">
-            <p class="portfolio-client">Comunicação de marca</p>
-            <h3>Conteúdo corporativo</h3>
-            <p>
-              Peças digitais desenvolvidas para manter consistência visual e
-              fortalecer a presença da marca nos canais digitais.
-            </p>
-            <span class="portfolio-link">Ver publicação</span>
-          </div>
-        </a>
-      </article>
-
-      <!-- CORPORATIVO 01 -->
-      <article
-        class="portfolio-card reveal"
-        data-category="corporativo"
-      >
-        <div class="portfolio-media">
-          <img
-            src="assets/img/portfolio/liderancas-do-futuro.jpg"
-            alt="Kit visual do Programa Lideranças do Futuro"
-            loading="lazy"
-            decoding="async"
-          />
-
-          <span class="portfolio-type">Comunicação corporativa</span>
-        </div>
-
-        <div class="portfolio-content">
-          <p class="portfolio-client">Programa Lideranças do Futuro</p>
-          <h3>Identidade de programa corporativo</h3>
-          <p>
-            Desenvolvimento do conceito visual e aplicação em caderno, banner,
-            materiais de apoio, tags e itens de apresentação.
-          </p>
-
-          <ul class="portfolio-deliverables">
-            <li>Conceito visual</li>
-            <li>Materiais para eventos</li>
-            <li>Kit corporativo</li>
-          </ul>
-        </div>
-      </article>
-
-      <!-- CORPORATIVO 02 -->
-      <article
-        class="portfolio-card reveal"
-        data-category="corporativo"
-      >
-        <div class="portfolio-media">
-          <img
-            src="assets/img/portfolio/barbosa-mello-campanha.jpg"
-            alt="Materiais institucionais da Construtora Barbosa Mello"
-            loading="lazy"
-            decoding="async"
-          />
-
-          <span class="portfolio-type">Comunicação institucional</span>
-        </div>
-
-        <div class="portfolio-content">
-          <p class="portfolio-client">Construtora Barbosa Mello</p>
-          <h3>Campanhas e materiais corporativos</h3>
-          <p>
-            Aplicação da comunicação da empresa em materiais institucionais,
-            campanhas internas, apresentações e peças promocionais.
-          </p>
-
-          <ul class="portfolio-deliverables">
-            <li>Campanhas internas</li>
-            <li>Materiais institucionais</li>
-            <li>Peças promocionais</li>
-          </ul>
-        </div>
-      </article>
-
-      <!-- IMPRESSO 01 -->
-      <article
-        class="portfolio-card reveal"
-        data-category="impresso"
-      >
-        <div class="portfolio-media">
-          <img
-            src="assets/img/portfolio/cimcop-queimaduras.jpg"
-            alt="Folder educativo sobre prevenção de queimaduras"
-            loading="lazy"
-            decoding="async"
-          />
-
-          <span class="portfolio-type">Editorial e impresso</span>
-        </div>
-
-        <div class="portfolio-content">
-          <p class="portfolio-client">CIMCOP</p>
-          <h3>Campanha de prevenção de queimaduras</h3>
-          <p>
-            Projeto editorial criado para apresentar informações de segurança
-            de maneira visual, acessível e adequada ao ambiente de trabalho.
-          </p>
-
-          <ul class="portfolio-deliverables">
-            <li>Folder informativo</li>
-            <li>Diagramação</li>
-            <li>Comunicação de segurança</li>
-          </ul>
-        </div>
-      </article>
-
-      <!-- IMPRESSO 02 -->
-      <article
-        class="portfolio-card reveal"
-        data-category="impresso"
-      >
-        <div class="portfolio-media">
-          <img
-            src="assets/img/portfolio/oxigenoterapia-folder.jpg"
-            alt="Folder informativo sobre oxigenoterapia hiperbárica"
-            loading="lazy"
-            decoding="async"
-          />
-
-          <span class="portfolio-type">Material informativo</span>
-        </div>
-
-        <div class="portfolio-content">
-          <p class="portfolio-client">Centro Mineiro de Medicina Hiperbárica</p>
-          <h3>Folder sobre oxigenoterapia</h3>
-          <p>
-            Organização de conteúdo técnico em uma peça informativa clara,
-            visualmente equilibrada e direcionada ao público da área de saúde.
-          </p>
-
-          <ul class="portfolio-deliverables">
-            <li>Projeto editorial</li>
-            <li>Tratamento de informações</li>
-            <li>Material para pacientes</li>
-          </ul>
-        </div>
-      </article>
-
-      <!-- EMBALAGEM -->
-      <article
-        class="portfolio-card portfolio-card-featured reveal"
-        data-category="embalagem"
-      >
-        <div class="portfolio-media">
-          <img
-            src="assets/img/portfolio/grand-imper-embalagem.jpg"
-            alt="Projeto de embalagem para tinta emborrachada Grand Imper"
-            loading="lazy"
-            decoding="async"
-          />
-
-          <span class="portfolio-type">Design de embalagem</span>
-        </div>
-
-        <div class="portfolio-content">
-          <p class="portfolio-client">Grand Imper</p>
-          <h3>Embalagem de produto</h3>
-          <p>
-            Desenvolvimento visual da embalagem de tinta emborrachada,
-            combinando identificação de produto, benefícios e diferenciação
-            no ponto de venda.
-          </p>
-
-          <ul class="portfolio-deliverables">
-            <li>Design de rótulo</li>
-            <li>Hierarquia de informações</li>
-            <li>Apresentação de produto</li>
-          </ul>
-        </div>
-      </article>
+<div class="work-item video" data-category="videos">
+  <iframe
+    src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7449782207042363392?compact=1"
+    title="Vídeo LinkedIn"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+</div>
     </div>
   </div>
 </section>
-
-    <section id="faq">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow">Perguntas frequentes</p>
-          <h2>Questões comuns</h2>
-        </div>
-
-        <div class="faq reveal">
-          <div class="faq-list">
-            <article class="faq-item">
-              <details>
-                <summary>Pode trabalhar com o nosso designer interno?</summary>
-                <div class="faq-answer">
-                  <p>
-                    Sim. Posso apoiar o designer ou a equipa de marketing
-                    existente, assumindo picos de trabalho e entregas específicas.
-                  </p>
-                </div>
-              </details>
-            </article>
-
-            <article class="faq-item">
-              <details>
-                <summary>Trabalha com agências?</summary>
-                <div class="faq-answer">
-                  <p>
-                    Sim. Posso atuar como parceira de produção ou em regime
-                    white label, respeitando os processos e a confidencialidade.
-                  </p>
-                </div>
-              </details>
-            </article>
-
-            <article class="faq-item">
-              <details>
-                <summary>Pode trabalhar através do Slack ou Teams?</summary>
-                <div class="faq-answer">
-                  <p>
-                    Sim. Adapto-me às ferramentas que a equipa já utiliza,
-                    incluindo Slack, Teams, Jira, Notion, Trello e ClickUp.
-                  </p>
-                </div>
-              </details>
-            </article>
-
-            <article class="faq-item">
-              <details>
-                <summary>O trabalho pode ser assíncrono?</summary>
-                <div class="faq-answer">
-                  <p>
-                    Sim. A maior parte das entregas pode ser conduzida de forma
-                    assíncrona, com atualizações objetivas e reuniões apenas
-                    quando forem necessárias.
-                  </p>
-                </div>
-              </details>
-            </article>
-
-            <article class="faq-item">
-              <details>
-                <summary>A comunicação pode ser em português ou inglês?</summary>
-                <div class="faq-answer">
-                  <p>
-                    Sim. A comunicação diária pode ser feita em português.
-                    Reuniões e assuntos comerciais em inglês contam com apoio
-                    do meu parceiro de negócio.
-                  </p>
-                </div>
-              </details>
-            </article>
-
-            <article class="faq-item">
-              <details>
-                <summary>Emite faturas para clientes internacionais?</summary>
-                <div class="faq-answer">
-                  <p>
-                    Sim. A Fradesign pode faturar serviços para clientes
-                    internacionais e alinhar o processo administrativo antes
-                    do início do trabalho.
-                  </p>
-                </div>
-              </details>
-            </article>
-
-            <article class="faq-item">
-              <details>
-                <summary>Quando pode começar?</summary>
-                <div class="faq-answer">
-                  <p>
-                    Depende da capacidade reservada no momento. Entre em
-                    contacto para confirmar disponibilidade e uma possível
-                    data de início.
-                  </p>
-                </div>
-              </details>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <section id="contact">
       <div class="container">
@@ -986,5 +472,7 @@
   <script src="assets/js/animations.js" defer></script>
   <script src="assets/js/portfolio.js" defer></script>
   <script src="assets/js/forms.js" defer></script>
+  <script src="assets/js/work-section.js" defer></script>
+  <script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>

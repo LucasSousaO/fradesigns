@@ -59,6 +59,7 @@ function initPortfolioFilters() {
 /* ==========================================================
    LIGHTBOX
    ========================================================== */
+   /*
 
 function initPortfolioLightbox() {
 
@@ -122,7 +123,7 @@ function initPortfolioLightbox() {
 
     });
 
-}
+}*/
 
 /* ==========================================================
    LAZY LOADING

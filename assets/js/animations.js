@@ -384,3 +384,26 @@ document.addEventListener("DOMContentLoaded", () => {
     startAutoplay();
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll(".work-tab");
+  const items = document.querySelectorAll(".work-item");
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const filter = tab.dataset.filter;
+
+      tabs.forEach((button) => {
+        const active = button === tab;
+        button.classList.toggle("is-active", active);
+        button.setAttribute("aria-selected", String(active));
+      });
+
+      items.forEach((item) => {
+        item.hidden =
+          filter !== "all" &&
+          item.dataset.category !== filter;
+      });
+    });
+  });
+});
